@@ -3,11 +3,14 @@ import styled from "styled-components";
 
 function HomePage() {
   const estilos = { backgroundColor: "red" };
+
+  console.log(config.playlists)
+
   return (
     <div style={estilos}>
       <Menu />
       <Header />
-      <Timeline />
+      <Timeline playlists={config.playlists}/>
     </div>
   );
 }
@@ -47,6 +50,7 @@ function Header() {
   );
 }
 
-function Timeline() {
-  return <div>Timeline</div>;
+function Timeline(props) {
+    console.log("Dentro do componente", props)
+  return <div>props.</div>;
 }

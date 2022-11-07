@@ -1,5 +1,14 @@
 {
     "name": "Édilo Sousa da Silva",
     "job": "System Developer",
-    "github": "edilosousa"
+    "github": "edilosousa",
+    "playlists":{
+        "games":[
+            {
+                "title": "Algum titulo",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            }
+        ]
+    }
 }
