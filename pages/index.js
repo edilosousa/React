@@ -1,36 +1,52 @@
-import config from '../config.json'
+import config from "../config.json";
+import styled from "styled-components";
 
 function HomePage() {
-    return (
+  const estilos = { backgroundColor: "red" };
+  return (
+    <div style={estilos}>
+      <Menu />
+      <Header />
+      <Timeline />
+    </div>
+  );
+}
+
+export default HomePage;
+
+function Menu() {
+  return <div>Menu</div>;
+}
+
+const StyledHeader = styled.div`
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 32px;
+    gap: 16px;
+  }
+`;
+function Header() {
+  return (
+    <StyledHeader>
+      {/* <img src='banner'/> */}
+      <section className="user-info">
+        <img src={`https://github.com/${config.github}.png`} />
         <div>
-            <Menu/>
-            <Header/>
-            <Timeline/>
+          <h2>{config.name}</h2>
+          <p>{config.job}</p>
         </div>
-    )
-  }
-  
-  export default HomePage
+      </section>
+    </StyledHeader>
+  );
+}
 
-  function Menu(){
-    return (
-        <div>Menu</div>
-    )
-  }
-
-  function Header(){
-    return (
-        <div>
-            <img src="banner" />
-            <img src={`https://github.com/${config.github}.png`} />
-            {config.name}
-            {config.job}
-        </div>
-    )
-  }
-
-  function Timeline(){
-    return (
-        <div>Timeline</div>
-    )
-  }
+function Timeline() {
+  return <div>Timeline</div>;
+}
